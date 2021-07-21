@@ -11,6 +11,16 @@
  * @return {number[]}
  */
 var twoSum = function(nums, target) {
+    
+   const hashMap  = new Map()
+
+   for(var i  = 0;i < nums.length;i++){
+       if(hashMap.has(target - nums[i])){
+           return [hashMap.get(target-nums[i]),i]
+       }else {
+           hashMap.set(nums[i],i)
+       }
+   }
 
 };
 // @lc code=end
